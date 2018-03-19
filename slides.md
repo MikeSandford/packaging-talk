@@ -3,6 +3,10 @@
 
 How to organize your code into a python package that can be installed with pip and published to pypi or other python repositories.
 
+### Mike Sandford
+#### Arundo Analytics
+http://www.arundo.com
+
 !SLIDE
 
 ## Why package up your python?
@@ -11,17 +15,19 @@ How to organize your code into a python package that can be installed with pip a
 
 ### Would you rather?
 ```
+pip install my-project
+do_something
+```
+or
+```
 git clone git@github.com:me/my-project.git
 cd my-project
 pip install -r requirements.txt
 echo "$PATH=~/my-project/:$PATH" >> ~/.bashrc
 python do_something.py
 ```
-vs
-```
-pip install my-project
-do_something
-```
+
+
 
 !SLIDE
 
@@ -57,7 +63,7 @@ What you need to easily distribute your software via:
 ## Why distribute your code?
 
 !SLIDE
-### To give back to the awesome python community
+### To give back to the awesome python community!
 
 ![batteres included](../images/python.png "Batteries Included")
 
@@ -92,8 +98,19 @@ pip install -r requirements.txt
 
 ## How to create a package
 
+1.  Have some working code
+2.  Put it into an appropriately named folder with __init__.py (package)
+3.  Create a setup.py file
+
 
 
 !SLIDE
 
 ## How to publish to pypi
+
+1.  Register accounts with test and prod
+2.  Create a .pypirc file
+3.  Verify against test
+4.  Publish in test
+5.  Verify in prod
+6.  Publish in prod
