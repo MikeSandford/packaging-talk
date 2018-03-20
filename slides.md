@@ -99,18 +99,156 @@ pip install -r requirements.txt
 ## How to create a package
 
 1.  Have some working code
-2.  Put it into an appropriately named folder with __init__.py (package)
-3.  Create a setup.py file
+2.  Create a setup.py file
+3.  Profit!
+
+!SLIDE
+
+### v0
+
+* Just barely works
+* Where most of us start
+
+!SLIDE
+
+### v1
+
+ * Better, using argparse rather than sys.argv
+ * Can we do better?
+
+!SLIDE
+### v1.1
+
+* Uses setup.py so installable
+* No "package hygiene" -> look in virtualenv
+
+!SLIDE
+### v1.2
+
+* Installable
+* Hygienic
+* Not easy to use from shell
+
+!SLIDE
+### v1.3
+
+* Installable
+* Package-hygienic
+* CLI binary
+
+!SLIDE
+### v2.0
+
+* Installable
+* Package-hygienic
+* CLI binary
+* Easy to read/understand
+
+!SLIDE
+### v2.1
+
+* Installable
+* Package-hygienic
+* CLI binary
+* Easy to read/understand
+* Documented!
+
+!SLIDE
+## How to publish to pypi
+
+I started with these directions:
+http://peterdowns.com/posts/first-time-with-pypi.html
+
+1.  Register accounts with test and prod
+2.  Create a .pypirc file
+3.  Publish in test
+4.  Publish in prod
+
+!SLIDE
+
+### Register accounts
+
+![not too hard](../images/not_too_hard.png "Just go for it")
+
+!SLIDE
+### Create .pypirc file
+
+```
+[distutils]
+index-servers =
+  pypi
+  testpypi
+
+[pypi]
+repositoy=https://pypi.python.org/pypi
+username=MikeSandfordArundo
+password=WHOAWHOAWHOA
+
+[testpypi]
+repository=https://test.pypi.org/legacy/
+username=MikeSandfordArundo
+password=WHOAWHOAWHOA
+```
+
+
+!SLIDE
+### Publish in test
+#### v2.2
+
+```
+(virt) sandford@mjolnir ~/talks/echoer $ python setup.py sdist
+/usr/lib/python3.5/distutils/dist.py:261: UserWarning: Unknown distribution option: 'entry_points'
+  warnings.warn(msg)
+/usr/lib/python3.5/distutils/dist.py:261: UserWarning: Unknown distribution option: 'install_requires'
+  warnings.warn(msg)
+running sdist
+running check
+warning: sdist: manifest template 'MANIFEST.in' does not exist (using default file list)
+
+warning: sdist: standard file not found: should have one of README, README.txt
+
+writing manifest file 'MANIFEST'
+creating Echoer-2.2
+creating Echoer-2.2/echoer
+making hard links in Echoer-2.2...
+hard linking setup.cfg -> Echoer-2.2
+hard linking setup.py -> Echoer-2.2
+hard linking echoer/__init__.py -> Echoer-2.2/echoer
+hard linking echoer/cli.py -> Echoer-2.2/echoer
+creating dist
+Creating tar archive
+removing 'Echoer-2.2' (and everything under it)
+(virt) sandford@mjolnir ~/talks/echoer $ twine upload --repository-url https://test.pypi.org/legacy/ dist/*
+Uploading distributions to https://test.pypi.org/legacy/
+Enter your username: MikeSandfordArundo
+Enter your password:
+Uploading Echoer-2.2.tar.gz
+100%|███████████████████████████████████████████████████████████████| 3.42k/3.42k [00:01<00:00, 3.31kB/s]
+(virt) sandford@mjolnir ~/talks/echoer $
+```
+
+!SLIDE
+### Publish in prod
+
+```
+(virt) sandford@mjolnir ~/talks/echoer $ twine upload dist/*Uploading distributions to https://upload.pypi.org/legacy/
+Uploading Echoer-2.2.tar.gz
+100%|███████████████████████████████████████████████████████████████| 3.42k/3.42k [00:00<00:00, 14.6kB/s]
+(virt) sandford@mjolnir ~/talks/echoer $
+```
+
+!SLIDE
+
+# Questions?
+
 
 
 
 !SLIDE
 
-## How to publish to pypi
+# Shameless Promotion
 
-1.  Register accounts with test and prod
-2.  Create a .pypirc file
-3.  Verify against test
-4.  Publish in test
-5.  Verify in prod
-6.  Publish in prod
+## Arundo Analytics
+### We're Hiring!
+
+http://www.arundo.com/
