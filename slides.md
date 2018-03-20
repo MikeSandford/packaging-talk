@@ -142,6 +142,7 @@ pip install -r requirements.txt
 * Installable
 * Package-hygienic
 * CLI binary
+* Includes dependencies
 * Easy to read/understand
 
 !SLIDE
@@ -150,6 +151,7 @@ pip install -r requirements.txt
 * Installable
 * Package-hygienic
 * CLI binary
+* Includes dependencies
 * Easy to read/understand
 * Documented!
 
@@ -158,6 +160,8 @@ pip install -r requirements.txt
 
 I started with these directions:
 http://peterdowns.com/posts/first-time-with-pypi.html
+
+Turns out they're totally wrong now!
 
 1.  Register accounts with test and prod
 2.  Create a .pypirc file
