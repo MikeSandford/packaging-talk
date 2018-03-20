@@ -3,7 +3,8 @@
 
 How to organize your code into a python package that can be installed with pip and published to pypi or other python repositories.
 
-### Mike Sandford (mike.sandford@arundo.com)
+### Mike Sandford
+mike.sandford@arundo.com
 #### Arundo Analytics
 http://www.arundo.com
 
@@ -269,4 +270,5 @@ Uploading Echoer-2.2.tar.gz
 ### We're Hiring!
 
 mike.sandford@arundo.com
+
 http://www.arundo.com/
