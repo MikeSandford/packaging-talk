@@ -257,6 +257,18 @@ Uploading Echoer-2.2.tar.gz
 
 !SLIDE
 
+## Skipped Items
+
+* Classifiers
+* Keywords
+* `find_packages`
+* Data files
+* Project URLs
+* Extra dependencies (dev, test, docs)
+
+
+!SLIDE
+
 # Questions?
 
 
