@@ -1,3 +1,7 @@
+# The talk itself
+
+https://mikesandford.github.io/packaging-talk/slides/
+
 # Why make python packages?
 
 That's what I will address in this talk
